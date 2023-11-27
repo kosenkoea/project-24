@@ -4547,6 +4547,26 @@
             }));
         }
     })();
+    (() => {
+        const telegram = document.querySelector(".telegram-reference__link");
+        let currentWidth;
+        let setRigthPositionTelegram;
+        function setWidth() {
+            currentWidth = window.innerWidth;
+            currentWidth >= 1230 ? setRigthPositionTelegram = (currentWidth - 1230) / 2 + 30 : setRigthPositionTelegram = 30;
+            telegram.style.right = `${setRigthPositionTelegram}px`;
+        }
+        setWidth();
+        window.addEventListener("resize", (() => {
+            setWidth();
+        }));
+    })();
+    (() => {
+        setTimeout((() => {
+            const telegram = document.querySelector(".telegram-reference");
+            telegram.style.opacity = 1;
+        }), 8e3);
+    })();
     window["FLS"] = true;
     isWebp();
     addTouchClass();
