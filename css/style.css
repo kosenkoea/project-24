@@ -1243,6 +1243,7 @@ body {
 
 .item-approach__descr {
   line-height: 1.6;
+  text-align: justify;
 }
 
 .partners__list {
