@@ -4564,7 +4564,7 @@
     (() => {
         setTimeout((() => {
             const telegram = document.querySelector(".telegram-reference");
-            telegram.style.opacity = 1;
+            telegram.style.display = "block";
         }), 8e3);
     })();
     window["FLS"] = true;
