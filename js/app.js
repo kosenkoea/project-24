@@ -4567,6 +4567,41 @@
             telegram.style.display = "block";
         }), 8e3);
     })();
+    (() => {
+        function removeServicesTabsText(servicesNames) {
+            let currentWidth = window.innerWidth;
+            if (currentWidth > 600) servicesNames.forEach((el => {
+                const innerText = el.innerHTML;
+                innerText === "Проект 3D" ? el.innerHTML = el.dataset.text : null;
+                innerText === "Надзор" ? el.innerHTML = el.dataset.text : null;
+            })); else servicesNames.forEach((el => {
+                const innerText = el.innerHTML;
+                innerText === "Дизайн – проект 3D" ? el.innerHTML = "Проект 3D" : null;
+                innerText === "Авторский надзор" ? el.innerHTML = "Надзор" : null;
+            }));
+        }
+        if (document.querySelector(".services_tabs")) {
+            const titleServicesNames = document.querySelector(".services_tabs").querySelectorAll(".title-services__name");
+            titleServicesNames.forEach((el => el.dataset.text = el.innerHTML));
+            removeServicesTabsText(titleServicesNames);
+            window.addEventListener("resize", (() => {
+                removeServicesTabsText(titleServicesNames);
+            }));
+        }
+    })();
+    (() => {
+        if (document.querySelector(".title-services")) {
+            const titleServicesLink = document.querySelectorAll(".title-services");
+            titleServicesLink.forEach((el => {
+                el.addEventListener("click", (() => {
+                    const dataNumber = el.dataset.number;
+                    localStorage["data-title-services"] = dataNumber;
+                }));
+            }));
+            titleServicesLink.forEach((el => el.classList.remove("_tab-active")));
+            if (localStorage["data-title-services"] >= 0) titleServicesLink[localStorage["data-title-services"]].classList.add("_tab-active");
+        }
+    })();
     window["FLS"] = true;
     isWebp();
     addTouchClass();
