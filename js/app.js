@@ -4373,8 +4373,8 @@
                 on: {}
             });
         }
-        if (document.querySelector(".main-services__slider") && document.querySelector(".thumbs-services__slider")) {
-            let thumbsProject = new swiper_core_Swiper(".thumbs-services__slider", {
+        if (document.querySelector(".main-services__slider_1") && document.querySelector(".thumbs-services__slider_1")) {
+            let thumbsProject = new swiper_core_Swiper(".thumbs-services__slider_1", {
                 modules: [],
                 observer: true,
                 observeParents: true,
@@ -4383,15 +4383,15 @@
                 speed: 800,
                 breakpoints: {
                     300: {
-                        slidesPerView: 2,
+                        slidesPerView: 5,
                         spaceBetween: 5
                     },
                     479: {
-                        slidesPerView: 3,
+                        slidesPerView: 5,
                         spaceBetween: 10
                     },
                     767: {
-                        slidesPerView: 4,
+                        slidesPerView: 5,
                         spaceBetween: 15
                     },
                     991: {
@@ -4401,7 +4401,7 @@
                 },
                 on: {}
             });
-            new swiper_core_Swiper(".main-services__slider", {
+            new swiper_core_Swiper(".main-services__slider_1", {
                 modules: [ Navigation, EffectFade, Thumb ],
                 observer: true,
                 observeParents: true,
@@ -4414,8 +4414,308 @@
                     disableOnInteraction: false
                 },
                 navigation: {
-                    prevEl: ".main-services__button-prev",
-                    nextEl: ".main-services__button-next"
+                    prevEl: ".main-services__button-prev_1",
+                    nextEl: ".main-services__button-next_1"
+                },
+                thumbs: {
+                    swiper: thumbsProject
+                },
+                on: {}
+            });
+        }
+        if (document.querySelector(".main-services__slider_2") && document.querySelector(".thumbs-services__slider_2")) {
+            let thumbsProject = new swiper_core_Swiper(".thumbs-services__slider_2", {
+                modules: [],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 5,
+                spaceBetween: 20,
+                speed: 800,
+                breakpoints: {
+                    300: {
+                        slidesPerView: 5,
+                        spaceBetween: 5
+                    },
+                    479: {
+                        slidesPerView: 5,
+                        spaceBetween: 10
+                    },
+                    767: {
+                        slidesPerView: 5,
+                        spaceBetween: 15
+                    },
+                    991: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    }
+                },
+                on: {}
+            });
+            new swiper_core_Swiper(".main-services__slider_2", {
+                modules: [ Navigation, EffectFade, Thumb ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                effect: "fade",
+                autoplay: {
+                    delay: 4e3,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    prevEl: ".main-services__button-prev_2",
+                    nextEl: ".main-services__button-next_2"
+                },
+                thumbs: {
+                    swiper: thumbsProject
+                },
+                on: {}
+            });
+        }
+        if (document.querySelector(".main-services__slider_3") && document.querySelector(".thumbs-services__slider_3")) {
+            let thumbsProject = new swiper_core_Swiper(".thumbs-services__slider_3", {
+                modules: [],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 5,
+                spaceBetween: 20,
+                speed: 800,
+                breakpoints: {
+                    300: {
+                        slidesPerView: 5,
+                        spaceBetween: 5
+                    },
+                    479: {
+                        slidesPerView: 5,
+                        spaceBetween: 10
+                    },
+                    767: {
+                        slidesPerView: 5,
+                        spaceBetween: 15
+                    },
+                    991: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    }
+                },
+                on: {}
+            });
+            new swiper_core_Swiper(".main-services__slider_3", {
+                modules: [ Navigation, EffectFade, Thumb ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                effect: "fade",
+                autoplay: {
+                    delay: 4e3,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    prevEl: ".main-services__button-prev_3",
+                    nextEl: ".main-services__button-next_3"
+                },
+                thumbs: {
+                    swiper: thumbsProject
+                },
+                on: {}
+            });
+        }
+        if (document.querySelector(".main-services__slider_4") && document.querySelector(".thumbs-services__slider_4")) {
+            let thumbsProject = new swiper_core_Swiper(".thumbs-services__slider_4", {
+                modules: [],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 5,
+                spaceBetween: 20,
+                speed: 800,
+                breakpoints: {
+                    300: {
+                        slidesPerView: 5,
+                        spaceBetween: 5
+                    },
+                    479: {
+                        slidesPerView: 5,
+                        spaceBetween: 10
+                    },
+                    767: {
+                        slidesPerView: 5,
+                        spaceBetween: 15
+                    },
+                    991: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    }
+                },
+                on: {}
+            });
+            new swiper_core_Swiper(".main-services__slider_4", {
+                modules: [ Navigation, EffectFade, Thumb ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                effect: "fade",
+                autoplay: {
+                    delay: 4e3,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    prevEl: ".main-services__button-prev_4",
+                    nextEl: ".main-services__button-next_4"
+                },
+                thumbs: {
+                    swiper: thumbsProject
+                },
+                on: {}
+            });
+        }
+        if (document.querySelector(".main-services__slider_5") && document.querySelector(".thumbs-services__slider_5")) {
+            let thumbsProject = new swiper_core_Swiper(".thumbs-services__slider_5", {
+                modules: [],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 5,
+                spaceBetween: 20,
+                speed: 800,
+                breakpoints: {
+                    300: {
+                        slidesPerView: 5,
+                        spaceBetween: 5
+                    },
+                    479: {
+                        slidesPerView: 5,
+                        spaceBetween: 10
+                    },
+                    767: {
+                        slidesPerView: 5,
+                        spaceBetween: 15
+                    },
+                    991: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    }
+                },
+                on: {}
+            });
+            new swiper_core_Swiper(".main-services__slider_5", {
+                modules: [ Navigation, EffectFade, Thumb ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                effect: "fade",
+                autoplay: {
+                    delay: 4e3,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    prevEl: ".main-services__button-prev_5",
+                    nextEl: ".main-services__button-next_5"
+                },
+                thumbs: {
+                    swiper: thumbsProject
+                },
+                on: {}
+            });
+        }
+        if (document.querySelector(".main-services__slider_6") && document.querySelector(".thumbs-services__slider_6")) {
+            let thumbsProject = new swiper_core_Swiper(".thumbs-services__slider_6", {
+                modules: [],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 5,
+                spaceBetween: 20,
+                speed: 800,
+                breakpoints: {
+                    300: {
+                        slidesPerView: 5,
+                        spaceBetween: 5
+                    },
+                    479: {
+                        slidesPerView: 5,
+                        spaceBetween: 10
+                    },
+                    767: {
+                        slidesPerView: 5,
+                        spaceBetween: 15
+                    },
+                    991: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    }
+                },
+                on: {}
+            });
+            new swiper_core_Swiper(".main-services__slider_6", {
+                modules: [ Navigation, EffectFade, Thumb ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                effect: "fade",
+                autoplay: {
+                    delay: 4e3,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    prevEl: ".main-services__button-prev_6",
+                    nextEl: ".main-services__button-next_6"
+                },
+                thumbs: {
+                    swiper: thumbsProject
+                },
+                on: {}
+            });
+        }
+        if (document.querySelector(".main-services__slider_7") && document.querySelector(".thumbs-services__slider_7")) {
+            let thumbsProject = new swiper_core_Swiper(".thumbs-services__slider_7", {
+                modules: [],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 5,
+                spaceBetween: 20,
+                speed: 800,
+                breakpoints: {
+                    300: {
+                        slidesPerView: 5,
+                        spaceBetween: 5
+                    },
+                    479: {
+                        slidesPerView: 5,
+                        spaceBetween: 10
+                    },
+                    767: {
+                        slidesPerView: 5,
+                        spaceBetween: 15
+                    },
+                    991: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    }
+                },
+                on: {}
+            });
+            new swiper_core_Swiper(".main-services__slider_7", {
+                modules: [ Navigation, EffectFade, Thumb ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                effect: "fade",
+                autoplay: {
+                    delay: 4e3,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    prevEl: ".main-services__button-prev_7",
+                    nextEl: ".main-services__button-next_7"
                 },
                 thumbs: {
                     swiper: thumbsProject

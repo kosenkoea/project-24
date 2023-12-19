@@ -1355,8 +1355,8 @@ body {
 }
 
 .slide-main-services__body {
-  width: 50rem;
-  height: 46.875rem;
+  width: 48.125rem;
+  height: 34.375rem;
   margin: 0 auto;
 }
 
@@ -2152,6 +2152,12 @@ body {
   }
 }
 
+@media (min-width: 50em) {
+  .main-services:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+}
+
 @media (min-width: 75em) {
   .title-services__name {
     font-size: 1.5rem;
@@ -2204,7 +2210,7 @@ body {
 
 @media (max-width: 50em) and (max-width: 20em) {
   .slide-main-services__body {
-    height: 18.75rem;
+    height: 13.125rem;
   }
 }
 
@@ -2326,6 +2332,10 @@ body {
 
   .content-services__image {
     padding-bottom: 0.75rem;
+  }
+
+  .main-services:not(:last-child) {
+    margin-bottom: 0.3125rem;
   }
 
   .slide-thumbs-services__body {
@@ -2603,27 +2613,9 @@ body {
   }
 }
 
-@media (max-width: 61.5625em) {
-  .main-services__slider {
-    margin: 0 -0.9375rem;
-  }
-
-  .main-project__slider {
-    margin: 0 -0.9375rem;
-  }
-
-  .slide-project__body {
-    width: 100%;
-  }
-}
-
 @media (max-width: 61.5625rem) {
   .main-services__navigation {
     display: none;
-  }
-
-  .thumbs-services {
-    margin: 0 -0.9375rem;
   }
 
   .main-project__navigation {
@@ -2632,6 +2624,16 @@ body {
 
   .thumbs-project {
     margin: 0 -0.9375rem;
+  }
+}
+
+@media (max-width: 61.5625em) {
+  .main-project__slider {
+    margin: 0 -0.9375rem;
+  }
+
+  .slide-project__body {
+    width: 100%;
   }
 }
 
@@ -3676,6 +3678,20 @@ body {
 }
 }
 
+@media (min-width: 20em) and (max-width: 50em) {
+@supports (margin-bottom: clamp( 0.3125rem , -0.3125rem  +  3.125vw , 1.25rem )) {
+    .main-services:not(:last-child) {
+      margin-bottom: clamp( 0.3125rem , -0.3125rem  +  3.125vw , 1.25rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.3125rem , -0.3125rem  +  3.125vw , 1.25rem )) {
+    .main-services:not(:last-child) {
+      margin-bottom: calc(0.3125rem + 0.9375 * (100vw - 20rem) / 30);
+    }
+}
+}
+
 @media (min-width: 62.5em) and (max-width: 75em) {
 @supports (left: clamp( -12.5rem , 25rem  +  -50vw , -6.25rem )) {
     .main-services__button-prev {
@@ -3704,20 +3720,20 @@ body {
 
 @media (max-width: 50em) and (min-width: 50em) {
   .slide-main-services__body {
-    height: 46.875rem;
+    height: 34.375rem;
   }
 }
 
 @media (max-width: 50em) and (min-width: 20em) and (max-width: 50em) {
-@supports (height: clamp( 18.75rem , 0.0000000625rem  +  93.75vw , 46.875rem )) {
+@supports (height: clamp( 13.125rem , -1.0416666667rem  +  70.8333333333vw , 34.375rem )) {
     .slide-main-services__body {
-      height: clamp( 18.75rem , 0.0000000625rem  +  93.75vw , 46.875rem );
+      height: clamp( 13.125rem , -1.0416666667rem  +  70.8333333333vw , 34.375rem );
     }
 }
 
-@supports not (height: clamp( 18.75rem , 0.0000000625rem  +  93.75vw , 46.875rem )) {
+@supports not (height: clamp( 13.125rem , -1.0416666667rem  +  70.8333333333vw , 34.375rem )) {
     .slide-main-services__body {
-      height: calc(18.75rem + 28.125 * (100vw - 20rem) / 30);
+      height: calc(13.125rem + 21.25 * (100vw - 20rem) / 30);
     }
 }
 }
