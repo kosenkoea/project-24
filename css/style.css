@@ -2140,7 +2140,11 @@ body {
   }
 
   .slide-thumbs__body {
-    heigth: 7.5rem;
+    max-heigth: 9.375rem;
+  }
+
+  .slide-thumbs__body {
+    height: 9.375rem;
   }
 
   .portfolio-big {
@@ -2391,7 +2395,11 @@ body {
   }
 
   .slide-thumbs__body {
-    heigth: 5rem;
+    max-heigth: 5rem;
+  }
+
+  .slide-thumbs__body {
+    height: 5rem;
   }
 
   .portfolio-big {
@@ -3333,15 +3341,27 @@ body {
     }
 }
 
-@supports (heigth: clamp( 5rem , 4.1208791209rem  +  4.3956043956vw , 7.5rem )) {
+@supports (max-heigth: clamp( 5rem , 3.4615384615rem  +  7.6923076923vw , 9.375rem )) {
     .slide-thumbs__body {
-      heigth: clamp( 5rem , 4.1208791209rem  +  4.3956043956vw , 7.5rem );
+      max-heigth: clamp( 5rem , 3.4615384615rem  +  7.6923076923vw , 9.375rem );
     }
 }
 
-@supports not (heigth: clamp( 5rem , 4.1208791209rem  +  4.3956043956vw , 7.5rem )) {
+@supports not (max-heigth: clamp( 5rem , 3.4615384615rem  +  7.6923076923vw , 9.375rem )) {
     .slide-thumbs__body {
-      heigth: calc(5rem + 2.5 * (100vw - 20rem) / 56.875);
+      max-heigth: calc(5rem + 4.375 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (height: clamp( 5rem , 3.4615384615rem  +  7.6923076923vw , 9.375rem )) {
+    .slide-thumbs__body {
+      height: clamp( 5rem , 3.4615384615rem  +  7.6923076923vw , 9.375rem );
+    }
+}
+
+@supports not (height: clamp( 5rem , 3.4615384615rem  +  7.6923076923vw , 9.375rem )) {
+    .slide-thumbs__body {
+      height: calc(5rem + 4.375 * (100vw - 20rem) / 56.875);
     }
 }
 

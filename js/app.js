@@ -4329,7 +4329,7 @@
                 on: {}
             });
             new swiper_core_Swiper(".main-project__slider", {
-                modules: [ Navigation, EffectFade, Thumb ],
+                modules: [ Navigation, EffectFade, Thumb, Autoplay ],
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
@@ -4385,11 +4385,6 @@
                 slidesPerView: 1,
                 spaceBetween: 0,
                 speed: 800,
-                effect: "fade",
-                autoplay: {
-                    delay: 4e3,
-                    disableOnInteraction: false
-                },
                 navigation: {
                     prevEl: ".main-services__button-prev_1",
                     nextEl: ".main-services__button-next_1"
@@ -4435,11 +4430,6 @@
                 slidesPerView: 1,
                 spaceBetween: 0,
                 speed: 800,
-                effect: "fade",
-                autoplay: {
-                    delay: 4e3,
-                    disableOnInteraction: false
-                },
                 navigation: {
                     prevEl: ".main-services__button-prev_2",
                     nextEl: ".main-services__button-next_2"
@@ -4485,11 +4475,6 @@
                 slidesPerView: 1,
                 spaceBetween: 0,
                 speed: 800,
-                effect: "fade",
-                autoplay: {
-                    delay: 4e3,
-                    disableOnInteraction: false
-                },
                 navigation: {
                     prevEl: ".main-services__button-prev_3",
                     nextEl: ".main-services__button-next_3"
@@ -4535,11 +4520,6 @@
                 slidesPerView: 1,
                 spaceBetween: 0,
                 speed: 800,
-                effect: "fade",
-                autoplay: {
-                    delay: 4e3,
-                    disableOnInteraction: false
-                },
                 navigation: {
                     prevEl: ".main-services__button-prev_4",
                     nextEl: ".main-services__button-next_4"
@@ -4585,11 +4565,6 @@
                 slidesPerView: 1,
                 spaceBetween: 0,
                 speed: 800,
-                effect: "fade",
-                autoplay: {
-                    delay: 4e3,
-                    disableOnInteraction: false
-                },
                 navigation: {
                     prevEl: ".main-services__button-prev_5",
                     nextEl: ".main-services__button-next_5"
@@ -4635,11 +4610,6 @@
                 slidesPerView: 1,
                 spaceBetween: 0,
                 speed: 800,
-                effect: "fade",
-                autoplay: {
-                    delay: 4e3,
-                    disableOnInteraction: false
-                },
                 navigation: {
                     prevEl: ".main-services__button-prev_6",
                     nextEl: ".main-services__button-next_6"
