@@ -386,8 +386,8 @@ body {
   height: 3.75rem;
   border: 0.125rem solid white;
   border-radius: 50%;
-  -webkit-animation: puls60 infinite 1.5s;
-          animation: puls60 infinite 1.5s;
+  -webkit-animation: puls60 infinite alternate 1.5s;
+          animation: puls60 infinite alternate 1.5s;
 }
 
 @-webkit-keyframes puls60 {
@@ -2191,8 +2191,8 @@ body {
   }
 
   .telegram-reference__link::after {
-    -webkit-animation: puls55 infinite 1.5s;
-            animation: puls55 infinite 1.5s;
+    -webkit-animation: puls55 infinite alternate 1.5s;
+            animation: puls55 infinite alternate 1.5s;
   }
 
   .services_tabs .services__navigation {
@@ -2229,8 +2229,8 @@ body {
   }
 
   .telegram-reference__link::after {
-    -webkit-animation: puls45 infinite 1.5s;
-            animation: puls45 infinite 1.5s;
+    -webkit-animation: puls45 infinite alternate 1.5s;
+            animation: puls45 infinite alternate 1.5s;
   }
 
   .hidden-menu {
@@ -2868,8 +2868,8 @@ body {
   }
 
   .telegram-reference__link::after {
-    -webkit-animation: puls50 infinite 1.5s;
-            animation: puls50 infinite 1.5s;
+    -webkit-animation: puls50 infinite alternate 1.5s;
+            animation: puls50 infinite alternate 1.5s;
   }
 
   .title-services__name {
