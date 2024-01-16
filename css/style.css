@@ -91,11 +91,11 @@
   content: "\e904";
 }
 
-._icon-instagram:before {
+._icon-telegram:before {
   content: "\e905";
 }
 
-._icon-twitter:before {
+._icon-instagram:before {
   content: "\e906";
 }
 
@@ -494,6 +494,62 @@ body {
   }
 }
 
+.move-up {
+  opacity: 0;
+}
+
+.move-up_active {
+  opacity: 1;
+}
+
+.move-up__btn {
+  position: fixed;
+  left: 0;
+  bottom: 26%;
+  width: 3.75rem;
+  height: 3.75rem;
+  font-size: 0.875rem;
+  line-height: 1.7857142857;
+  background-color: rgba(31, 31, 31, 0.3);
+  border-radius: 50%;
+}
+
+.move-up__btn span::before {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.move-up__btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 3.75rem;
+  height: 3.75rem;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 0.125rem solid white;
+  border-radius: 50%;
+}
+
+.move-up__btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 3.75rem;
+  height: 3.75rem;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 0.125rem solid white;
+  border-radius: 50%;
+  -webkit-animation: puls60 infinite alternate 1.5s;
+          animation: puls60 infinite alternate 1.5s;
+}
+
 .icon-menu {
   display: none;
 }
@@ -565,6 +621,10 @@ body {
   padding-bottom: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.48px;
+}
+
+.menu__link_active {
+  pointer-events: none;
 }
 
 .menu__link_active::after {
@@ -689,7 +749,6 @@ body {
 
 .slider-hero__advantages {
   position: absolute;
-  right: 0;
   bottom: -88%;
   -webkit-transition: bottom 0.2s ease-in;
   transition: bottom 0.2s ease-in;
@@ -705,7 +764,7 @@ body {
 
 .slide-hero__image {
   position: relative;
-  height: 100vh;
+  height: 100svh;
   min-height: 56.25rem;
 }
 
@@ -733,6 +792,7 @@ body {
 
 .slide-hero__content {
   position: absolute;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100%;
@@ -761,6 +821,10 @@ body {
 
 .slide-hero__info-project {
   text-align: justify;
+}
+
+.slide-hero__info-project:not(:last-child) {
+  margin-bottom: 5rem;
 }
 
 .slide-hero__project-title {
@@ -1181,8 +1245,8 @@ body {
   transition: top 0.3s ease-in 0s;
 }
 
-.body-portfolio__item_disabled .body-portfolio__hidden {
-  top: -100% !important;
+.body-portfolio__hidden_active {
+  top: 0;
 }
 
 .body-portfolio__location {
@@ -1215,6 +1279,41 @@ body {
   position: relative;
   top: -0.5rem;
   font-size: 0.625rem;
+}
+
+.body-portfolio__btn {
+  opacity: 0;
+}
+
+.touch .body-portfolio__btn {
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -3.125rem;
+  padding: 1.5625rem 0 0.3125rem 0;
+  font-size: 1.25rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.touch .body-portfolio__btn span {
+  display: inline-block;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.body-portfolio__hidden_active .body-portfolio__btn {
+  bottom: 0rem;
+  background: transparent;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
+
+.body-portfolio__hidden_active .body-portfolio__btn span {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .services__navigation {
@@ -2149,6 +2248,12 @@ body {
             animation: puls55 infinite alternate 1.5s;
   }
 
+  .move-up__btn {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    font-size: 0.75rem;
+  }
+
   .services_tabs .services__navigation {
     margin: 0 -0.9375rem;
   }
@@ -2185,6 +2290,12 @@ body {
   .telegram-reference__link::after {
     -webkit-animation: puls45 infinite alternate 1.5s;
             animation: puls45 infinite alternate 1.5s;
+  }
+
+  .move-up__btn {
+    width: 2.8125rem;
+    height: 2.8125rem;
+    font-size: 0.625rem;
   }
 
   .hidden-menu {
@@ -2802,6 +2913,11 @@ body {
   .telegram-reference__link::after {
     -webkit-animation: puls50 infinite alternate 1.5s;
             animation: puls50 infinite alternate 1.5s;
+  }
+
+  .move-up__btn {
+    width: 3.125rem;
+    height: 3.125rem;
   }
 
   .title-services__name {

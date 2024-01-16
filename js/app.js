@@ -14,6 +14,29 @@
             document.documentElement.classList.add(className);
         }));
     }
+    let isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+        }
+    };
+    function addTouchClass() {
+        if (isMobile.any()) document.documentElement.classList.add("touch");
+    }
     function addLoadedClass() {
         if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
             setTimeout((function() {
@@ -4827,8 +4850,8 @@
     })();
     (() => {
         function hiddenVisibleByClickAdvantagesHero(getSliderHero, getBtn) {
-            let setClassListSliderHero = Array.from(getSliderHero.classList);
-            if (setClassListSliderHero.includes("slider-hero__advantages_open")) {
+            let getClassListSliderHero = Array.from(getSliderHero.classList);
+            if (getClassListSliderHero.includes("slider-hero__advantages_open")) {
                 getSliderHero.classList.remove("slider-hero__advantages_open");
                 getBtn.innerHTML = "Показать";
             } else {
@@ -4845,21 +4868,23 @@
         }
     })();
     (() => {
-        const telegram = document.querySelector(".telegram-reference__link");
-        let currentWidth;
-        let setRigthPositionTelegram;
-        function setWidth() {
-            currentWidth = window.innerWidth;
-            currentWidth >= 1230 ? setRigthPositionTelegram = (currentWidth - 1230) / 2 + 30 : setRigthPositionTelegram = 30;
-            telegram.style.right = `${setRigthPositionTelegram}px`;
-        }
-        setWidth();
-        window.addEventListener("resize", (() => {
+        if (document.querySelector(".telegram-reference__link")) {
+            const telegram = document.querySelector(".telegram-reference__link");
+            let currentWidth;
+            let setRigthPositionTelegram;
+            function setWidth() {
+                currentWidth = window.innerWidth;
+                currentWidth >= 1230 ? setRigthPositionTelegram = (currentWidth - 1230) / 2 + 30 : setRigthPositionTelegram = 30;
+                telegram.style.right = `${setRigthPositionTelegram}px`;
+            }
             setWidth();
-        }));
+            window.addEventListener("resize", (() => {
+                setWidth();
+            }));
+        }
     })();
     (() => {
-        setTimeout((() => {
+        if (document.querySelector(".telegram-reference__link")) setTimeout((() => {
             const telegram = document.querySelector(".telegram-reference");
             telegram.style.display = "block";
         }), 8e3);
@@ -4899,8 +4924,55 @@
             if (localStorage["data-title-services"] >= 0) titleServicesLink[localStorage["data-title-services"]].classList.add("_tab-active");
         }
     })();
+    (() => {
+        function hiddenVisibleByClickBodyPortfolioHidden(target) {
+            let bodyPortfolioHidden = target.parentElement;
+            let getClassListBodyPortfolioHidden = Array.from(bodyPortfolioHidden.classList);
+            if (getClassListBodyPortfolioHidden.includes("body-portfolio__hidden_active")) bodyPortfolioHidden.classList.remove("body-portfolio__hidden_active"); else bodyPortfolioHidden.classList.add("body-portfolio__hidden_active");
+        }
+        if (document.querySelector(".body-portfolio__btn")) {
+            let getBodyPortfolioBtns = document.querySelectorAll(".body-portfolio__btn");
+            getBodyPortfolioBtns.forEach((elem => {
+                elem.addEventListener("click", (() => {
+                    hiddenVisibleByClickBodyPortfolioHidden(elem);
+                }));
+            }));
+        }
+    })();
+    (() => {
+        if (document.querySelector(".move-up__btn")) {
+            const moveUp = document.querySelector(".move-up__btn");
+            let currentWidth;
+            let setLeftPositionMoveUp;
+            function setWidth(params) {
+                currentWidth = window.innerWidth;
+                currentWidth >= 1230 ? setLeftPositionMoveUp = (currentWidth - 1230) / 2 + 30 : setLeftPositionMoveUp = 30;
+                moveUp.style.left = `${setLeftPositionMoveUp}px`;
+            }
+            setWidth();
+            window.addEventListener("resize", (() => {
+                setWidth();
+            }));
+        }
+    })();
+    (() => {
+        if (document.querySelector(".move-up")) {
+            let moveUp = document.querySelector(".move-up");
+            let getClassMoveUp;
+            window.addEventListener("scroll", (() => {
+                if (window.scrollY >= window.innerHeight * 2) {
+                    getClassMoveUp = Array.from(moveUp.classList);
+                    if (!getClassMoveUp.includes("move-up_active")) moveUp.classList.add("move-up_active");
+                } else {
+                    getClassMoveUp = Array.from(moveUp.classList);
+                    if (getClassMoveUp.includes("move-up_active")) moveUp.classList.remove("move-up_active");
+                }
+            }));
+        }
+    })();
     window["FLS"] = true;
     isWebp();
+    addTouchClass();
     addLoadedClass();
     menuInit();
     tabs();
