@@ -4913,15 +4913,15 @@
     })();
     (() => {
         if (document.querySelector(".title-services")) {
-            const titleServicesLink = document.querySelectorAll(".title-services");
-            titleServicesLink.forEach((el => {
+            const titleServicesLinks = document.querySelectorAll(".title-services");
+            titleServicesLinks.forEach((el => {
                 el.addEventListener("click", (() => {
                     const dataNumber = el.dataset.number;
                     localStorage["data-title-services"] = dataNumber;
                 }));
             }));
-            titleServicesLink.forEach((el => el.classList.remove("_tab-active")));
-            if (localStorage["data-title-services"] >= 0) titleServicesLink[localStorage["data-title-services"]].classList.add("_tab-active");
+            titleServicesLinks.forEach((el => el.classList.remove("_tab-active")));
+            if (localStorage["data-title-services"] >= 0) titleServicesLinks[localStorage["data-title-services"]].classList.add("_tab-active");
         }
     })();
     (() => {
@@ -4967,6 +4967,24 @@
                     getClassMoveUp = Array.from(moveUp.classList);
                     if (getClassMoveUp.includes("move-up_active")) moveUp.classList.remove("move-up_active");
                 }
+            }));
+        }
+    })();
+    (() => {
+        if (document.querySelector(".portfolio") && document.querySelector(".portfolio__sub-title")) {
+            let portfolioBtns = document.querySelectorAll(".portfolio__sub-title");
+            let portfolioArrBtns = Array.from(portfolioBtns).map((el => el.innerHTML));
+            function writeLocalStorage(innerHtml, portfolioArrBtns) {
+                localStorage["data-portfolio-sub-title"] = portfolioArrBtns.indexOf(innerHtml);
+            }
+            if (localStorage["data-portfolio-sub-title"]) portfolioBtns.forEach((el => {
+                el.classList.remove("_tab-active");
+                if (el.innerHTML === portfolioArrBtns[localStorage["data-portfolio-sub-title"]]) el.classList.add("_tab-active");
+            }));
+            portfolioBtns.forEach((el => {
+                el.addEventListener("click", (() => {
+                    writeLocalStorage(el.innerHTML, portfolioArrBtns);
+                }));
             }));
         }
     })();
