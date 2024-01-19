@@ -838,6 +838,11 @@ body {
   -webkit-text-stroke: 0.0625rem #fff;
 }
 
+.slide-hero__project-title span span {
+  position: relative;
+  top: -0.9375rem;
+}
+
 .slide-hero__descr-project {
   font-size: 1.25rem;
   font-weight: 400;
